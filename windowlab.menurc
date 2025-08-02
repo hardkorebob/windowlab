@@ -1,7 +1,6 @@
 # make sure each line ends in LF not CRLF!
-Terminal:xterm
-Firefox:firefox
-GIMP:gimp
-About:windowlab -about | xmessage -file -
-Reload:pkill -HUP windowlab
-Quit:pkill windowlab
+term:terminology
+9front:drawterm
+web:chromium
+dmenu:dmenu_run
+bye:pkill windowlab
