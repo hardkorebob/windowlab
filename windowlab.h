@@ -317,6 +317,7 @@ extern Window taskbar;
 extern XftDraw *tbxftdraw;
 #endif
 extern void make_taskbar(void);
+extern void send_mouse_menu(void);
 extern void cycle_previous(void);
 extern void cycle_next(void);
 extern void lclick_taskbar(int);
