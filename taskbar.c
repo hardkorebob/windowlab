@@ -250,6 +250,16 @@ void rclick_taskbar(int x)
 	XDestroyWindow(dsply, constraint_win);
 	ungrab();
 }
+void send_mouse_menu(void)
+{
+	Display *dsply;
+	Window root_window;
+	dsply = XOpenDisplay(0);
+	root_window = XRootWindow(dsply, 0);
+	XSelectInput(dsply, root_window, KeyReleaseMask);
+	XWarpPointer(dsply, None, root_window, 0, 0, 0, 0, 10, 10);
+	XFlush(dsply);
+}
 
 void rclick_root(void)
 {
