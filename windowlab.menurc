@@ -4,3 +4,4 @@ term:terminology
 web:chromium
 dmenu:dmenu_run
 bye:pkill windowlab
+reload:pkill -HUP windowlab
