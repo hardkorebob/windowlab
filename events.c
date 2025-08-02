@@ -156,6 +156,9 @@ static void handle_button_press(XButtonEvent *e)
 		if (e->button == Button3)
 		{
 			rclick_root();
+		} else if (e->button == Button2)
+		{
+			send_mouse_menu();
 		} else {
             XAllowEvents(dsply, ReplayPointer, CurrentTime);
         }
@@ -198,6 +201,19 @@ static void handle_button_press(XButtonEvent *e)
 		else if (e->button == Button3)
 		{
 			rclick_root();
+		}
+		else if (e->button == Button2)
+		{
+			c =find_client(e->window,FRAME);
+			if (c != NULL)
+			{
+				// click-to-focus
+				check_focus(c);
+				if (e->y < BARHEIGHT() && c != fullscreen_client)
+				{
+					send_mouse_menu();
+				}
+			}
 		}
 	}
 }
