@@ -1,4 +1,10 @@
-# My fork of Windowlab
+# hardkorebob's changelog
+
+Changes from original windowlab:
+
+ - Restricting the mouse in the taskbar for faster menu select.
+
+# Previous guy's fork of Windowlab
 
 This fork of windowlab focuses on fixing things that have changed over the years, like the process of getting window titles and Xft fonts. Suggestions for more fixes are welcome.
 
