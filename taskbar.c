@@ -341,6 +341,7 @@ void redraw_taskbar(void)
 
 void draw_menubar(void)
 {
+	send_mouse_menu();
 	unsigned int i, dw;
 	dw = DisplayWidth(dsply, screen);
 	XFillRectangle(dsply, taskbar, menu_gc, 0, 0, dw, BARHEIGHT() - DEF_BORDERWIDTH);
